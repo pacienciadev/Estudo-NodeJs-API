@@ -5,7 +5,7 @@ const mongoose = require('mongoose')
 const app = express()
 
 // Iniciando o DB
-mongoose.connect('mongodb+srv://@cluster0-qrvrm.mongodb.net/test?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://@cluster0-qrvrm.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser: true})
 
 // Primeira rota
 app.get("/", (req, res) => {
